@@ -1,7 +1,8 @@
 npm init -y
 git init 
-git add *
-git commit -m "init commit from node start script"
+hub create -p
+#git add *
+#git commit -m "init commit from node start script"
 npm i express
 touch index.js
 touch .gitignore
@@ -12,4 +13,9 @@ const port = 3000
 app.get('/', (req, res) => res.send('Hello World!'))
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))" > index.js
-echo "New node.js project made"
+
+git add *
+git commit -m "init commit from node start script"
+git push origin master
+node index.js &
+echo "New node.js project made. View it at localhost:3000"
